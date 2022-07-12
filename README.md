@@ -1,6 +1,6 @@
 # Martini Force Fields
 
-[![Paper DOI](https://img.shields.io/badge/Paper%20DOI-10.1038/s41592-021-01098-3-blue)](https://doi.org/10.1038/s41592-021-01098-3)
+[![Paper DOI](https://img.shields.io/badge/Paper%20DOI-10.1038/s41592-021-01098-3-blue.svg)](https://doi.org/10.1038/s41592-021-01098-3)
 
 ## Summary
 
@@ -32,7 +32,7 @@ Molecule itp file definitions moving forward will be called `martini_vX.Y.Z_mole
 All molecules are associated with a paticular force-field version they are compatible with.
 
 * `molecule` denotes a paticular class of molecules (e.g. ions, sugars, etc.)
-* `Q` indicates different versions of molecule parameters in terms of mapping, bonded interactions, or bead assigment<\br>
+* `Q` indicates different versions of molecule parameters in terms of mapping, bonded interactions, or bead assigment
   `Q` increases with the new parameters but does not get reset when changeing the minor version
 
 ## Installation
