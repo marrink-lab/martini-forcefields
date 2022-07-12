@@ -1,15 +1,15 @@
 # Martini Force Fields
 
-[![DOI:10.1038/s41467-021-27627-4](https://zenodo.org/badge/DOI/11.1038/s41592-021-01098-3.svg)](https://doi.org/11.1038/s41592-021-01098-3)
+[![DOI:10.1038/s41592-021-01098-3](https://zenodo.org/badge/DOI/10.1038/s41592-021-01098-3.svg)](https://doi.org/10.1038/s41592-021-01098-3)
 
 ## Summary
 
 This repository contains parameters of the Martini force field for version 3 and higher, released by the Marrink lab and collaborators. 
-Details on parametrization of the bead-bead interactions and rules for creating new molecules can be found in the [recent publication](https://doi.org/11.1038/s41592-021-01098-3). 
+Details on parametrization of the bead-bead interactions and rules for creating new molecules can be found in the [recent publication](https://doi.org/10.1038/s41592-021-01098-3). 
 The files, which contain the interaction and molecule definitions, are in GROMACS [itp/top format](https://manual.gromacs.org/current/reference-manual/topologies/topology-file-formats.html).In addition, files [in vermouth-format](https://vermouth-martinize.readthedocs.io/en/latest/file_formats.html)
 are present, which can be used by programs such as martinize2 or polyply. Such files store the definitions of the protein model
-for example. This repsoitory also exposes python entry points for reading in and handling datafiles, both itp and ff with the vermouth
-python library.
+for example. In the future this repsoitory will expose python entry points for reading in and handling datafiles, both itp and ff with the vermouth
+python library. The python aspect of this package is currently under construction.
 
 Force field interaction parameters are defined by the major releases (i.e. `v3.X.Y`) and follow a versioning scheme, which defines 
 compatibility, as outlined below. Molecule parameters are defined by the major release and a single version indicator 
@@ -40,26 +40,12 @@ Vermouth ff file definitions moving forward will be stored in a directory named 
 * `moleculeXYZ` referes to the major version the ff-files are compatible with
 * `V` denotes changes made in the input files, similar to Q in the molecule files
 
-## Installation
-```bash
-pip install martini-forcefields
-```
+## References
+A collection of references for specific and general molecule parameters for the Martini force-field. 
 
-## Use in Python
+| Filename | Paper | Major Version | Release Date | Comments |
+| -------- | --- | -------- | --- | --- |
+| `martini_v3.X.Y` | [DOI](https://doi.org/10.1038/s41592-021-01098-3) | 3 | March 29th, 2021 | version 3 interaction parameters |
+| `martini_v3.X.Y_small_molecules_v2.itp` | [DOI](https://doi.org/10.1002/adts.202100391) | 3 | December 30th, 2021 | additional molecules & validation |
+| `martini_v3.X.Y_sugars_v2.itp` | submitted | 3 | XXXXX | imporved sugar parameters & additional molecules |
 
-Installing this package exposes an entry point that makes the `vX.Y.Z` directories easily accessible by other packages in the same python installation.
-If the [vermouth](https://github.com/marrink-lab/vermouth-martinize) and [polyply](https://github.com/marrink-lab/polyply_1.0) itp and topology files
-can be directly accessed:
-
-```
->>> from openff.toolkit.typing.engines.smirnoff import ForceField
->>> ff = ForceField('openff-1.0.0-RC1.offxml') 
-```
-
-Otherwise, the entry point can be accessed by querying the `openforcefield.smirnoff_forcefield_directory` entry point group.
-
-```
->>> from pkg_resources import iter_entry_points
->>> for entry_point in iter_entry_points(group='openforcefield.smirnoff_forcefield_directory'):
-...     print(entry_point.load()())
-```
