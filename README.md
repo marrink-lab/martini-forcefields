@@ -1,6 +1,6 @@
 # Martini Force Fields
 
-[![Paper DOI](https://img.shields.io/badge/Paper%20DOI-10.1038/s41592-021-01098-3-blue.svg)](https://doi.org/10.1038/s41592-021-01098-3)
+[![DOI:10.1038/s41467-021-27627-4](https://zenodo.org/badge/DOI/11.1038/s41592-021-01098-3.svg)](https://doi.org/11.1038/s41592-021-01098-3)
 
 ## Summary
 
