@@ -35,6 +35,11 @@ All molecules are associated with a paticular force-field version they are compa
 * `Q` indicates different versions of molecule parameters in terms of mapping, bonded interactions, or bead assigment
   `Q` increases with the new parameters but does not get reset when changeing the minor version
 
+Vermouth ff file definitions moving forward will be stored in a directory named `martiniXYZV`
+
+* `moleculeXYZ` referes to the major version the ff-files are compatible with
+* `V` denotes changes made in the input files, similar to Q in the molecule files
+
 ## Installation
 ```bash
 pip install martini-forcefields
@@ -43,7 +48,8 @@ pip install martini-forcefields
 ## Use in Python
 
 Installing this package exposes an entry point that makes the `vX.Y.Z` directories easily accessible by other packages in the same python installation.
-If the [vermouth](https://github.com/marrink-lab/vermouth-martinize) and [polyply](https://github.com/marrink-lab/polyply_1.0) are installed, it will automatically detect and use this entry point:
+If the [vermouth](https://github.com/marrink-lab/vermouth-martinize) and [polyply](https://github.com/marrink-lab/polyply_1.0) itp and topology files
+can be directly accessed:
 
 ```
 >>> from openff.toolkit.typing.engines.smirnoff import ForceField
@@ -57,5 +63,3 @@ Otherwise, the entry point can be accessed by querying the `openforcefield.smirn
 >>> for entry_point in iter_entry_points(group='openforcefield.smirnoff_forcefield_directory'):
 ...     print(entry_point.load()())
 ```
-
-## Versions
