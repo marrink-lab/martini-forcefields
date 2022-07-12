@@ -1,0 +1,18 @@
+; /coarse/fabian/current-projects/polymer_itp_builder/vermouth_dev/venvv/bin/polyply gen_params -f aminoacids.ff -seq GLY:2 -name lys -o test.itp
+
+; Please cite the following papers:
+
+[ moleculetype ]
+lys 1
+
+[ atoms ]
+1 SP1 1 GLY BB 1 0.0 
+2 SP1 2 GLY BB 2 0.0 
+
+[ bonds ]
+1 2 1 0.3375 4000
+
+[ constraints ]
+; Backbone bonds
+1 2 1 0.3375
+
