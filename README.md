@@ -46,6 +46,6 @@ A collection of references for specific and general molecule parameters for the 
 | Filename | Paper | Major Version | Release Date | Comments |
 | -------- | --- | -------- | --- | --- |
 | `martini_v3.X.Y` | [DOI](https://doi.org/10.1038/s41592-021-01098-3) | 3 | March 29th, 2021 | version 3 interaction parameters |
-| `martini_v3.X.Y_small_molecules_v2.itp` | [DOI](https://doi.org/10.1002/adts.202100391) | 3 | December 30th, 2021 | additional molecules & validation |
+| `martini_v3.X.Y_small_molecules_v1.itp` | [DOI](https://doi.org/10.1002/adts.202100391) | 3 | December 30th, 2021 | additional molecules & validation |
 | `martini_v3.X.Y_sugars_v2.itp` | submitted | 3 | XXXXX | imporved sugar parameters & additional molecules |
 
