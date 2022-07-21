@@ -6,9 +6,9 @@
 
 This repository contains parameters of the Martini force field for version 3 and higher, released by the Marrink lab and collaborators. 
 Details on parametrization of the bead-bead interactions and rules for creating new molecules can be found in the [recent publication](https://doi.org/10.1038/s41592-021-01098-3). 
-The files, which contain the interaction and molecule definitions, are in GROMACS [itp/top format](https://manual.gromacs.org/current/reference-manual/topologies/topology-file-formats.html).In addition, files [in vermouth-format](https://vermouth-martinize.readthedocs.io/en/latest/file_formats.html)
+The files, which contain the interaction and molecule definitions, are in GROMACS [itp/top format](https://manual.gromacs.org/current/reference-manual/topologies/topology-file-formats.html). In addition, files [in vermouth-format](https://vermouth-martinize.readthedocs.io/en/latest/file_formats.html)
 are present, which can be used by programs such as martinize2 or polyply. Such files store the definitions of the protein model
-for example. In the future this repsoitory will expose python entry points for reading in and handling datafiles, both itp and ff with the vermouth
+for example. In the future this repository will expose python entry points for reading in and handling datafiles, both itp and ff with the vermouth
 python library. The python aspect of this package is currently under construction.
 
 Force field interaction parameters are defined by the major releases (i.e. `v3.X.Y`) and follow a versioning scheme, which defines 
@@ -28,12 +28,12 @@ Force fields moving forward will be called `martini_vX.Y.Z`
 * `Y` denotes some changes in the interaction levels between beads
 * `Z` is a bug fix version -- e.g. something we've caught and corrected.
 
-Molecule .itp file definitions moving forward will be called `martini_vX.Y.Z_molecule_v.Q.itp`
+Molecule itp file definitions moving forward will be called `martini_vX.Y.Z_molecule_v.Q.itp`
 All molecules are associated with a particular force field version they are compatible with.
 
 * `molecule` denotes a particular class of molecules (e.g. ions, sugars, etc.)
-* `Q` indicates different versions of molecule parameters in terms of mapping, bonded interactions, or bead assigment
-  `Q` increases with the new parameters but does not get reset when changeing the minor version
+* `Q` indicates different versions of molecule parameters in terms of mapping, bonded interactions, or bead assigments
+  `Q` increases with the new parameters but does not get reset when changing the minor version
 
 Vermouth ff file definitions moving forward will be stored in a directory named `martiniXYZV`
 
@@ -47,5 +47,4 @@ A collection of references for specific and general molecule parameters for the 
 | -------- | --- | -------- | --- | --- |
 | `martini_v3.X.Y` | [DOI](https://doi.org/10.1038/s41592-021-01098-3) | 3 | March 29th, 2021 | version 3 interaction parameters |
 | `martini_v3.X.Y_small_molecules_v1.itp` | [DOI](https://doi.org/10.1002/adts.202100391) | 3 | December 30th, 2021 | additional molecules & validation |
-| `martini_v3.X.Y_sugars_v2.itp` | submitted | 3 | XXXXX | imporved sugar parameters & additional molecules |
-
+| `martini_v3.X.Y_sugars_v2.itp` | submitted | 3 | XXXXX | improved sugar parameters & additional molecules |
